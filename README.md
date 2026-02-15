@@ -66,29 +66,45 @@ npm run dev
 - The Office: http://localhost:3001/office
 - Team Debriefs: Click "Team Debriefs" button
 
-### 2. Telegram (Optional)
+### 2. WhatsApp Reports (Active)
 
-**Setup (5 min):**
-```bash
-cd /Users/evil/projekt-kompass/agents/team-system/telegram
+**Agents post directly to WhatsApp:**
+- 06:00: Scout research findings
+- 10:00: Analyst validation + recommendations
+- 12:00: Skeptiker challenges + kill-tests
+- 12:30: Team Debrief summary + learnings
 
-# 1. Create bot via @BotFather, get token
-python3 bot.py setup <bot-token>
+**Format:**
+```
+🔍 SCOUT REPORT - 2026-02-16
 
-# 2. Create groups: #scout, #analyst, #skeptiker, #team-discussion, #announcements
-# 3. Add bot to all groups
-# 4. Send test message in each group
+Found 12 ideas from free sources ($0 cost).
+TOP 3: Equipment rental, Invoice OCR, MES
 
-# 5. Get chat IDs
-python3 bot.py get-chat-ids
-
-# 6. Update telegram/config.json with IDs
-# 7. Test
-python3 bot.py post scout "Test 🔍"
-python3 bot.py announce "Test announcement 🐇"
+📄 Full: agents/scout/reports/2026-02-16.md
 ```
 
-**Full instructions:** [telegram/README.md](./telegram/README.md)
+**Already configured** - no setup needed!
+
+---
+
+### 3. Telegram (Optional - Skipped)
+
+**Infrastructure ready** but not activated.  
+**Why skip:** WhatsApp-first approach, less friction.
+
+**To activate later (5 min):**
+```bash
+cd telegram
+python3 bot.py setup <bot-token>
+# Create 5 groups, add bot, get IDs
+# Full guide: telegram/README.md
+```
+
+**Benefits if activated:**
+- Separate channels per agent
+- Live team discussion
+- Daniel can "lurk" without agents knowing
 
 ### 3. Cron Jobs
 
