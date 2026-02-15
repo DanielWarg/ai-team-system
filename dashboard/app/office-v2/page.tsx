@@ -30,7 +30,7 @@ const DESK_POSITIONS = {
   scout: { x: 100, y: 150 },
   analyst: { x: 300, y: 150 },
   skeptiker: { x: 500, y: 150 },
-  alice: { x: 650, y: 150 },
+  alice: { x: 640, y: 330 }, // Boss office
 }
 
 const LOCATION_POSITIONS = {
@@ -38,7 +38,11 @@ const LOCATION_POSITIONS = {
   'break-room': (index: number) => ({ x: 600 + (index * 30), y: 220 }),
   'conference-room': (index: number) => ({ x: 280 + (index * 50), y: 90 }),
   'phone-booth': () => ({ x: 650, y: 250 }),
-  office: () => ({ x: 650, y: 320 }),
+  'office': (index: number) => ({ 
+    // Alice's office - agents can visit
+    x: index === 0 ? 650 : 620 + (index * 30),
+    y: index === 0 ? 320 : 340
+  }),
 }
 
 const LOCATIONS = {
@@ -46,7 +50,7 @@ const LOCATIONS = {
   'break-room': { name: 'Break Room', color: '#f59e0b' },
   'conference-room': { name: 'Meeting', color: '#8b5cf6' },
   'phone-booth': { name: 'On Call', color: '#3b82f6' },
-  office: { name: 'Office', color: '#64748b' },
+  office: { name: "Alice's Office 🐇", color: '#ff6b35' },
 }
 
 export default function OfficeV2() {
@@ -141,12 +145,11 @@ export default function OfficeV2() {
               {/* Walls */}
               <rect x="0" y="0" width="700" height="250" fill="#111827" opacity="0.5" />
               
-              {/* Desks */}
+              {/* Team Desks */}
               {[
                 { x: 50, y: 200, label: 'Scout Desk' },
                 { x: 250, y: 200, label: 'Analyst Desk' },
                 { x: 450, y: 200, label: 'Skeptiker Desk' },
-                { x: 600, y: 200, label: 'Alice Desk' },
               ].map((desk, i) => (
                 <g key={i}>
                   {/* Desk */}
@@ -178,6 +181,25 @@ export default function OfficeV2() {
               <text x="640" y="195" textAnchor="middle" fontSize="10" fill="#fbbf24">Coffee Break</text>
               <text x="640" y="245" textAnchor="middle" fontSize="24">☕</text>
               
+              {/* Alice's Office (Boss Room) */}
+              <rect x="590" y="290" width="100" height="90" rx="4" fill="#1e1b4b" stroke="#ff6b35" strokeWidth="2" />
+              <text x="640" y="285" textAnchor="middle" fontSize="10" fill="#ff6b35" fontWeight="600">Alice's Office 🐇</text>
+              
+              {/* Alice's Desk (bigger, fancier) */}
+              <rect x="610" y="310" width="60" height="40" rx="2" fill="#4b5563" stroke="#ff6b35" strokeWidth="1.5" />
+              <rect x="613" y="313" width="54" height="34" fill="#1f2937" />
+              
+              {/* Multiple monitors (boss setup) */}
+              <rect x="625" y="318" width="26" height="20" rx="1" fill="#0f172a" stroke="#334155" strokeWidth="0.5" />
+              <rect x="627" y="320" width="22" height="16" fill="#0ea5e9" opacity="0.7" />
+              
+              {/* Lamp */}
+              <circle cx="660" cy="320" r="3" fill="#fbbf24" opacity="0.8" />
+              <line x1="660" y1="323" x2="660" y2="335" stroke="#78350f" strokeWidth="1" />
+              
+              {/* Door */}
+              <rect x="685" y="320" width="3" height="30" rx="1.5" fill="#78350f" stroke="#ff6b35" strokeWidth="0.5" />
+              
               {/* Agents */}
               {agents.map(([name, agent], i) => {
                 // Group agents by location to spread them out
@@ -195,7 +217,7 @@ export default function OfficeV2() {
                 } else if (agent.location === 'phone-booth') {
                   pos = LOCATION_POSITIONS['phone-booth']()
                 } else if (agent.location === 'office') {
-                  pos = LOCATION_POSITIONS.office()
+                  pos = LOCATION_POSITIONS.office(indexAtLocation)
                 }
                 
                 const agentName = name as 'scout' | 'analyst' | 'skeptiker' | 'alice'
