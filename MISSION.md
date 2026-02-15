@@ -1,22 +1,29 @@
 # Team Mission
 
-**Goal:** Find ONE idea worth 10k SEK investment within 30 days
+**Goal:** Build ONE shippable product worth 10k SEK investment within 30 days
 
 **Started:** 2026-02-15  
 **Deadline:** 2026-03-17  
 **Days remaining:** 30
 
+**Scope update (2026-02-15 16:42):**
+- Not just "find idea" → **"build finished product ready to ship"**
+- We have the tools: Vercel, postboxen.se, Git, AI (Gemini/Opus/Sonnet), NextJS
+- SEO/marketing comes AFTER product-market fit
+- EU directives 2026 = opportunity space (forced compliance = paying customers)
+
 ---
 
 ## Success Criteria
 
-An idea is "worth 10k SEK" if:
+A product is "worth 10k SEK" if:
 
 ✅ **MVP buildable in 3-7 days**  
-✅ **Launch cost <5k SEK**  
+✅ **Launch cost <5k SEK** (Vercel free tier + domain + tools)  
 ✅ **ROI >50% within 90 days** (15k SEK return minimum)  
 ✅ **Passive operation** (<30 min/day maintenance)  
-✅ **Validated demand** (proven market, not speculation)
+✅ **Validated demand** (proven market, not speculation)  
+✅ **Shippable on Vercel** (NextJS + AI backend compatible)
 
 ---
 
@@ -33,18 +40,28 @@ An idea is "worth 10k SEK" if:
 
 ## Focus This Week (2026-02-15 → 2026-02-22)
 
-**Theme:** Broad Reddit sweep for problems + small profitable things people already do
+**Theme:** EU directives 2026 + AI compliance automation
+
+**Primary:** Lönetransparensdirektiv (pay transparency)
+**Secondary:** Other EU directives going live 2026 (AI Act, CSRD, supply chain, GDPR updates)
+
+**Pattern to exploit:**
+- EU directive = forced compliance (companies MUST do it)
+- Traditional solution = expensive consultants (10k-100k SEK)
+- AI solution = "Software + AI sköter den" (299-999 SEK/mån SaaS)
+- Tech stack: Vercel + NextJS + AI (Gemini/Claude) + Supabase (free tier)
 
 **Avoid:**
 - Equipment/Fleet/Vehicle maintenance tracking (tested 2x, killed 2x)
 - Invoice automation (red ocean, Fortnox/Visma dominant)
 - Anything Fortnox can build in <1 month
+- Ideas that can't ship on Vercel (avoid infrastructure complexity)
 
 **Explore:**
-- r/smallbusiness, r/Entrepreneur, r/sweatystartup
-- r/SideProject, r/IMadeThis (people making money)
-- r/RealEstate, r/Landlord, r/freelance, r/Accounting
-- "Plastbit på snöret" opportunities (simple tools, 99-299 SEK/mån)
+- EU directive databases + implementation deadlines
+- HR compliance subreddits (r/humanresources, r/AskHR)
+- Sustainability compliance (CSRD = every large company)
+- AI regulation compliance (AI Act = new territory)
 
 ---
 
