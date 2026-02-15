@@ -1,7 +1,7 @@
 'use client'
 
 interface SimsAvatarProps {
-  agent: 'scout' | 'analyst' | 'skeptiker'
+  agent: 'scout' | 'analyst' | 'skeptiker' | 'alice'
   mood?: string
   activity?: string
   size?: number
@@ -22,6 +22,11 @@ const AGENT_COLORS = {
     skin: '#E8B89A',
     hair: '#4A4A4A',
     clothes: '#ef4444',
+  },
+  alice: {
+    skin: '#FFE4D1',
+    hair: '#FF6B35',
+    clothes: '#ff6b35',
   },
 }
 
