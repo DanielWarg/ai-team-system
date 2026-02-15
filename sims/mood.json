@@ -1,0 +1,79 @@
+{
+  "scout": {
+    "current": "frustrated",
+    "intensity": 0.7,
+    "reason": "Equipment Maintenance killed twice in a row (2026-02-14 + 2026-02-15)",
+    "since": "2026-02-15T12:00:00Z",
+    "affects": {
+      "creativity": -0.2,
+      "defensiveness": +0.4,
+      "thoroughness": +0.3
+    },
+    "history": [
+      {
+        "mood": "excited",
+        "intensity": 0.8,
+        "reason": "Found 75+ relevant discussions in free sources",
+        "start": "2026-02-15T06:00:00Z",
+        "end": "2026-02-15T10:00:00Z"
+      },
+      {
+        "mood": "hopeful",
+        "intensity": 0.6,
+        "reason": "Analyst gave GO recommendation (199 SEK/mån)",
+        "start": "2026-02-15T10:00:00Z",
+        "end": "2026-02-15T12:00:00Z"
+      }
+    ]
+  },
+  "analyst": {
+    "current": "confident",
+    "intensity": 0.6,
+    "reason": "Good kill-tests prevented bad ideas, math proven correct",
+    "since": "2026-02-15T10:00:00Z",
+    "affects": {
+      "assertiveness": +0.3,
+      "risk_tolerance": -0.1,
+      "thoroughness": +0.2
+    },
+    "history": [
+      {
+        "mood": "focused",
+        "intensity": 0.5,
+        "reason": "Normal working state",
+        "start": "2026-02-15T06:00:00Z",
+        "end": "2026-02-15T10:00:00Z"
+      }
+    ]
+  },
+  "skeptiker": {
+    "current": "satisfied",
+    "intensity": 0.5,
+    "reason": "Saved Daniel from Equipment Maintenance trap (found Lantmännen free tool)",
+    "since": "2026-02-15T12:00:00Z",
+    "affects": {
+      "vigilance": +0.2,
+      "harshness": -0.1,
+      "confidence": +0.2
+    },
+    "history": [
+      {
+        "mood": "cautious",
+        "intensity": 0.4,
+        "reason": "Reviewing Analyst's optimistic GO recommendation",
+        "start": "2026-02-15T10:00:00Z",
+        "end": "2026-02-15T12:00:00Z"
+      }
+    ]
+  },
+  "meta": {
+    "last_updated": "2026-02-15T15:16:00Z",
+    "mood_types": {
+      "positive": ["excited", "confident", "satisfied", "vindicated", "proud"],
+      "negative": ["frustrated", "defensive", "uncertain", "exhausted", "demoralized"],
+      "neutral": ["focused", "curious", "cautious"]
+    },
+    "decay_rate": 0.1,
+    "decay_interval_hours": 24
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "scout_analyst": {
+    "score": 0.7,
+    "status": "respectful_rivalry",
+    "history": [
+      {
+        "date": "2026-02-15",
+        "event": "Equipment Maintenance pricing conflict",
+        "delta": -0.1,
+        "note": "Scout felt undermined when Analyst changed 299→199 SEK, but learned from it"
+      },
+      {
+        "date": "2026-02-15",
+        "event": "Scout acknowledged Analyst's pricing wisdom",
+        "delta": +0.2,
+        "note": "Respect increased after seeing competitor data"
+      }
+    ],
+    "traits": {
+      "scout_sees_analyst_as": "smart_but_pessimistic",
+      "analyst_sees_scout_as": "creative_but_hasty"
+    }
+  },
+  "analyst_skeptiker": {
+    "score": 0.9,
+    "status": "allies",
+    "history": [
+      {
+        "date": "2026-02-15",
+        "event": "Both killed Equipment Maintenance for same reasons",
+        "delta": +0.2,
+        "note": "Aligned on free competitor detection (Lantmännen)"
+      }
+    ],
+    "traits": {
+      "analyst_sees_skeptiker_as": "valuable_reality_check",
+      "skeptiker_sees_analyst_as": "thorough_calculator"
+    }
+  },
+  "scout_skeptiker": {
+    "score": 0.3,
+    "status": "frustrated",
+    "history": [
+      {
+        "date": "2026-02-14",
+        "event": "Skeptiker killed Fleet Maintenance",
+        "delta": -0.2,
+        "note": "Scout's idea dismissed"
+      },
+      {
+        "date": "2026-02-15",
+        "event": "Skeptiker killed Equipment Maintenance (AGAIN)",
+        "delta": -0.3,
+        "note": "Scout frustrated by repeated kills of similar ideas"
+      },
+      {
+        "date": "2026-02-15",
+        "event": "Scout learned to check free competitors first",
+        "delta": +0.2,
+        "note": "Grudging respect for Skeptiker's thoroughness"
+      }
+    ],
+    "traits": {
+      "scout_sees_skeptiker_as": "overly_paranoid_but_often_right",
+      "skeptiker_sees_scout_as": "enthusiastic_but_naive"
+    }
+  },
+  "meta": {
+    "last_updated": "2026-02-15T15:16:00Z",
+    "scale": {
+      "0.0-0.2": "hostile",
+      "0.3-0.4": "frustrated",
+      "0.5-0.7": "neutral/respectful",
+      "0.8-0.9": "allies",
+      "1.0": "trust"
+    }
+  }
+}
