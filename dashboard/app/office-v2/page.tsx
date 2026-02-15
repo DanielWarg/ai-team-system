@@ -30,6 +30,15 @@ const DESK_POSITIONS = {
   scout: { x: 100, y: 150 },
   analyst: { x: 300, y: 150 },
   skeptiker: { x: 500, y: 150 },
+  alice: { x: 650, y: 150 },
+}
+
+const LOCATION_POSITIONS = {
+  desk: (agentName: string) => DESK_POSITIONS[agentName as keyof typeof DESK_POSITIONS] || { x: 100, y: 150 },
+  'break-room': (index: number) => ({ x: 600 + (index * 30), y: 220 }),
+  'conference-room': (index: number) => ({ x: 280 + (index * 50), y: 90 }),
+  'phone-booth': () => ({ x: 650, y: 250 }),
+  office: () => ({ x: 650, y: 320 }),
 }
 
 const LOCATIONS = {
@@ -85,10 +94,8 @@ export default function OfficeV2() {
     )
   }
 
-  // Filter to only show scout, analyst, skeptiker
-  const agents = Object.entries(state.agents).filter(([name]) => 
-    name === 'scout' || name === 'analyst' || name === 'skeptiker'
-  )
+  // Show all agents
+  const agents = Object.entries(state.agents)
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-8">
@@ -139,6 +146,7 @@ export default function OfficeV2() {
                 { x: 50, y: 200, label: 'Scout Desk' },
                 { x: 250, y: 200, label: 'Analyst Desk' },
                 { x: 450, y: 200, label: 'Skeptiker Desk' },
+                { x: 600, y: 200, label: 'Alice Desk' },
               ].map((desk, i) => (
                 <g key={i}>
                   {/* Desk */}
@@ -172,26 +180,31 @@ export default function OfficeV2() {
               
               {/* Agents */}
               {agents.map(([name, agent], i) => {
-                const deskPos = DESK_POSITIONS[name as keyof typeof DESK_POSITIONS] || DESK_POSITIONS.scout
-                let x = deskPos.x
-                let y = deskPos.y
+                // Group agents by location to spread them out
+                const agentsAtLocation = agents.filter(([_, a]) => a.location === agent.location)
+                const indexAtLocation = agentsAtLocation.findIndex(([n]) => n === name)
                 
-                // Adjust position based on location
-                if (agent.location === 'conference-room') {
-                  x = 300 + (i - 1) * 50
-                  y = 90
+                let pos = { x: 100, y: 150 }
+                
+                if (agent.location === 'desk') {
+                  pos = LOCATION_POSITIONS.desk(name)
                 } else if (agent.location === 'break-room') {
-                  x = 630
-                  y = 220
+                  pos = LOCATION_POSITIONS['break-room'](indexAtLocation)
+                } else if (agent.location === 'conference-room') {
+                  pos = LOCATION_POSITIONS['conference-room'](indexAtLocation)
+                } else if (agent.location === 'phone-booth') {
+                  pos = LOCATION_POSITIONS['phone-booth']()
+                } else if (agent.location === 'office') {
+                  pos = LOCATION_POSITIONS.office()
                 }
                 
-                const agentName = name as 'scout' | 'analyst' | 'skeptiker'
+                const agentName = name as 'scout' | 'analyst' | 'skeptiker' | 'alice'
                 const moodFromSims = simsData?.moods?.[name]?.current || agent.mood
                 
                 return (
                   <g 
                     key={name} 
-                    transform={`translate(${x - 40}, ${y - 80})`}
+                    transform={`translate(${pos.x - 40}, ${pos.y - 80})`}
                     className="cursor-pointer hover:opacity-90 transition-all duration-500"
                     onClick={() => setSelectedAgent(name)}
                   >
@@ -285,7 +298,7 @@ export default function OfficeV2() {
               
               <div className="mb-4">
                 <SimsAvatar 
-                  agent={selectedAgent as 'scout' | 'analyst' | 'skeptiker'}
+                  agent={selectedAgent as 'scout' | 'analyst' | 'skeptiker' | 'alice'}
                   mood={simsData?.moods?.[selectedAgent]?.current || state.agents[selectedAgent].mood}
                   activity={state.agents[selectedAgent].activity}
                   size={120}
