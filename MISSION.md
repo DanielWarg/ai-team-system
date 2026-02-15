@@ -69,11 +69,17 @@ An idea is "worth 10k SEK" if:
 
 ## Decision Framework
 
-**Scout proposes** → **Analyst validates** → **Skeptiker challenges**
+**Scout proposes** → **Analyst validates** → **Skeptiker challenges** → **Team decides**
+
+**Autonomy principle (2026-02-15):**
+- Team evaluates ideas independently
+- Alice coordinates and drives execution
+- Daniel involved ONLY at financial decision points (spend/commit)
+- Team owns go/no-go/maybe decisions
 
 **Outcome options:**
-1. **GO** - All three agree, or 2/3 with strong reasoning
-2. **NO-GO** - Any critical flaw (free competitor, Fortnox risk, etc)
+1. **GO** - All three agree, or 2/3 with strong reasoning → Team Debrief builds scope + budget → Daniel approves spend
+2. **NO-GO** - Any critical flaw (free competitor, Fortnox risk, etc) → KILL immediately
 3. **MAYBE** - Needs more research (park for later)
 
 **Current rule:** If Skeptiker says NO-GO with evidence → KILL immediately. Don't waste time.
