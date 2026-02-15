@@ -25,8 +25,8 @@ export default function RootLayout({
               <Link href="/" className="text-gray-400 hover:text-cyan transition-colors">
                 Build Progress
               </Link>
-              <Link href="/office" className="text-gray-400 hover:text-cyan transition-colors">
-                The Office 🏢
+              <Link href="/office-v2" className="text-gray-400 hover:text-cyan transition-colors">
+                The Office (SIMS) 🏢
               </Link>
             </div>
           </div>
