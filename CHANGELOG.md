@@ -24,6 +24,69 @@ Step 5: Test & Verify       [░░░░░░░░░░] 0% ⏳ (Tomorrow 06
 
 ### 2026-02-15
 
+#### 16:00 - SIMS UPGRADE COMPLETE 🎮
+**Massive UI + system upgrade! Agents är nu SIMS-karaktärer med relationships, mood, events.**
+
+**SIMS SYSTEM (Phase 3A-C):**
+- ✅ relationships.json tracking (scout/analyst/skeptiker)
+  - scout_analyst: 0.7 (respectful rivalry)
+  - analyst_skeptiker: 0.9 (allies)
+  - scout_skeptiker: 0.3 (frustrated)
+- ✅ mood.json with emotional states
+  - scout: frustrated (0.7) - Equipment Maintenance killed 2x
+  - analyst: confident (0.6) - good kill-tests
+  - skeptiker: satisfied (0.5) - saved Daniel from bad idea
+- ✅ events/2026-02-15.json logging conflicts + learnings
+- ✅ sims-manager.py for updating relationships/mood/events
+- ✅ Team Debrief calls sims-manager efter conversation
+
+**UI UPGRADE:**
+- ✅ SimsAvatar component (cartoon characters med mood faces)
+- ✅ Office V2 page (isometric office layout)
+- ✅ Skrivbord med monitors + tangentbord
+- ✅ Conference table + coffee room
+- ✅ Agents som SIMS-karaktärer (inte cirklar)
+- ✅ Relationship lines (color-coded: green=allies, red=frustrated)
+- ✅ Mood bubbles (emoji: 😤😎😌)
+- ✅ Activity indicators (laptop för work, coffee för break)
+- ✅ Interactive agent cards med SIMS stats
+- ✅ API endpoints (/api/sims/relationships, /api/sims/moods)
+
+**FEATURES:**
+- Animated agents moving between locations
+- Mood-based facial expressions (frustrated, confident, satisfied, excited, defensive)
+- Activity visualization (working = laptop, coffee-break = ☕)
+- Relationship lines mellan agents (thicker = stronger)
+- Click agent → detailed SIMS data (mood, reason, relationships)
+- Real-time polling (3s) för activity + SIMS updates
+
+**URLs:**
+- Old office: http://localhost:3001/office (simple dots)
+- **New SIMS office: http://localhost:3001/office-v2** (cartoon characters + furniture)
+
+**FILES:**
+- `sims/relationships.json` (2.1 KB)
+- `sims/mood.json` (2.2 KB)
+- `sims/events/2026-02-15.json` (2.5 KB)
+- `sims/sims-manager.py` (8 KB, executable)
+- `dashboard/app/components/SimsAvatar.tsx` (4.4 KB)
+- `dashboard/app/office-v2/page.tsx` (15.5 KB)
+- `dashboard/app/api/sims/relationships/route.ts`
+- `dashboard/app/api/sims/moods/route.ts`
+- Updated Team Debrief cron (calls sims-manager)
+- Updated layout.tsx (navigation)
+
+**GIT:**
+- 2 commits pushed
+- https://github.com/DanielWarg/ai-team-system
+
+**NEXT:**
+- Agents läser SIMS context innan körning (relationships + mood)
+- Phase 3D: Autonomy (budget, self-spawned tasks)
+- More animations (walking, typing, coffee-drinking)
+
+**Status:** SIMS edition LIVE 🎮
+
 #### 15:15 - WhatsApp-First Approach ✅
 **Daniel's beslut: Skippa Telegram, kör WhatsApp direkt.**
 
