@@ -377,9 +377,13 @@ export default function OfficeV2() {
               <h3 className="text-sm font-semibold text-gray-300 mb-4">📅 Upcoming</h3>
               <div className="space-y-3">
                 {state.upcomingEvents.map((event: any, i: number) => (
-                  <div key={i} className="text-xs">
-                    <div className="text-gray-400">{new Date(event.time).toLocaleTimeString()}</div>
-                    <div className="text-gray-200">{event.name}</div>
+                  <div key={i} className="text-xs border-l-2 border-cyan/30 pl-3 py-1">
+                    <div className="text-cyan font-medium mb-1">
+                      {event.type === 'team-meeting' && '👥 Team Meeting'}
+                      {event.type === 'coffee-break' && '☕ Coffee Break'}
+                      {!event.type && (event.name || 'Event')}
+                    </div>
+                    <div className="text-gray-400">{new Date(event.time).toLocaleTimeString()} • {event.location || event.agenda}</div>
                   </div>
                 ))}
               </div>
