@@ -24,6 +24,59 @@ Step 5: Test & Verify       [░░░░░░░░░░] 0% ⏳ (Tomorrow 06
 
 ### 2026-02-15
 
+#### 14:20 - Telegram Integration Ready 📱
+**Live channels för agents! Infrastructure complete, väntar på Daniel's bot setup (5 min).**
+
+**BYGGT:**
+- ✅ Python bot script (`telegram/bot.py`)
+  - `post <agent> <message>` - posta till agent channel + team discussion
+  - `announce <message>` - posta till announcements (Daniel ser)
+  - `get-chat-ids` - hitta chat IDs efter bot setup
+  - `setup <token>` - konfigurera bot token
+- ✅ Config template (`telegram/config.json`)
+- ✅ Setup guide (`telegram/README.md`) - 5-minutersguide för Daniel
+- ✅ Helper script (`post-report.sh`) - posta full rapport med GitHub-länk
+
+**CHANNELS:**
+```
+📱 Telegram
+├── 🔍 #scout (Scout's private chat)
+├── 📊 #analyst (Analyst's private chat)
+├── ⚠️ #skeptiker (Skeptiker's private chat)
+├── 💬 #team-discussion (alla agents diskuterar)
+└── 📢 #announcements (Alice → Daniel)
+```
+
+**FLOW:**
+1. Scout posts findings → #scout + #team-discussion
+2. Analyst posts analysis → #analyst + #team-discussion
+3. Skeptiker posts challenges → #skeptiker + #team-discussion
+4. Team Debrief posts summary → #announcements
+5. Daniel kan lyssna/delta i #team-discussion live
+
+**SETUP (Daniel):**
+1. Message @BotFather → create bot → get token
+2. Run `python3 telegram/bot.py setup <token>`
+3. Create 5 groups (#scout, #analyst, #skeptiker, #team, #announcements)
+4. Add bot to all groups (as admin)
+5. Send test message in each group
+6. Run `python3 telegram/bot.py get-chat-ids`
+7. Update `telegram/config.json` with IDs
+8. Test: `python3 telegram/bot.py post scout "Test 🔍"`
+
+**FILES:**
+- `telegram/bot.py` (6.2 KB, executable)
+- `telegram/config.json` (template)
+- `telegram/README.md` (3.8 KB setup guide)
+- `telegram/post-report.sh` (helper script)
+- Updated main README with Telegram section
+
+**GIT:**
+- Committed + pushed to GitHub
+- https://github.com/DanielWarg/ai-team-system/commit/961faff
+
+**NEXT:** Daniel skapar bot (5 min), agents börjar posta live
+
 #### 14:00 - Conversation Viewer Built ✨
 **Dashboard now shows team conversations with pratbubblor!**
 
