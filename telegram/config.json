@@ -1,0 +1,10 @@
+{
+  "bot_token": "",
+  "chats": {
+    "scout": "",
+    "analyst": "",
+    "skeptiker": "",
+    "team": "",
+    "announcements": ""
+  }
+}
