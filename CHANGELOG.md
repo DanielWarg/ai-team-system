@@ -24,6 +24,47 @@ Step 5: Test & Verify       [░░░░░░░░░░] 0% ⏳ (Tomorrow 06
 
 ### 2026-02-15
 
+#### 15:15 - WhatsApp-First Approach ✅
+**Daniel's beslut: Skippa Telegram, kör WhatsApp direkt.**
+
+**UPPDATERAT:**
+- ✅ Scout cron → WhatsApp delivery (06:00 dagligen)
+- ✅ Analyst cron → WhatsApp delivery (10:00 dagligen)
+- ✅ Skeptiker cron → WhatsApp delivery (12:00 dagligen)
+- ✅ Team Debrief cron → WhatsApp delivery (12:30 dagligen)
+- ✅ whatsapp-integration.md dokumenterar flow
+- ✅ README uppdaterad (WhatsApp = active, Telegram = optional)
+
+**FLOW:**
+```
+06:00 Scout researchar → WhatsApp summary
+10:00 Analyst validerar → WhatsApp summary
+12:00 Skeptiker granskar → WhatsApp summary
+12:30 Team Debrief → WhatsApp learnings
+```
+
+**TELEGRAM STATUS:**
+- Infrastructure klar (bot.py, setup guide, config template)
+- Parkerat - kan aktiveras 5 min om Daniel vill senare
+- Ligger i `/telegram/` för framtida användning
+
+**RATIONALE:**
+- WhatsApp redan konfigurerad + fungerar
+- Mindre friction (inget setup)
+- Daniel ser allt i samma app
+- Telegram = nice-to-have, inte must-have
+
+**FILES:**
+- `whatsapp-integration.md` (2.9 KB)
+- Updated README.md (WhatsApp-first section)
+- Updated 4 cron jobs (explicit WhatsApp delivery)
+
+**GIT:**
+- Committed + pushed
+- https://github.com/DanielWarg/ai-team-system
+
+**NEXT:** Test imorgon 06:00 - Scout kör med LEARNINGS + postar till WhatsApp
+
 #### 14:20 - Telegram Integration Ready 📱
 **Live channels för agents! Infrastructure complete, väntar på Daniel's bot setup (5 min).**
 
