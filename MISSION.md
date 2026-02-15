@@ -1,29 +1,36 @@
 # Team Mission
 
-**Goal:** Build ONE shippable product worth 10k SEK investment within 30 days
+**Goal:** Build PORTFOLIO of 10-20 micro-products generating 20-100k SEK/mån
 
 **Started:** 2026-02-15  
-**Deadline:** 2026-03-17  
-**Days remaining:** 30
+**Deadline:** First 3 products shipped by 2026-03-17 (30 days)  
+**Strategy:** Not 1 Volvo-project → 100 small ideas, agents drive passively
 
-**Scope update (2026-02-15 16:42):**
-- Not just "find idea" → **"build finished product ready to ship"**
-- We have the tools: Vercel, postboxen.se, Git, AI (Gemini/Opus/Sonnet), NextJS
-- SEO/marketing comes AFTER product-market fit
-- EU directives 2026 = opportunity space (forced compliance = paying customers)
+**Philosophy (2026-02-15 17:32):**
+- **Diversification:** 10-20 products × 2-5k SEK/mån = 20-100k total
+- **Automation-first:** Agents run operations, Daniel builds MVPs only
+- **Speed wins:** Decide → Build → Ship → SEO → Repeat (days, not months)
+- **Portfolio approach:** Risk spread across many products, not betting on one
+
+**Example portfolio:**
+- EU compliance checker (299 SEK/mån × 50) = 15k/mån
+- LinkedIn pain scanner (149 SEK/mån × 100) = 15k/mån  
+- Meeting→Tasks (99 SEK/mån × 200) = 20k/mån
+- Kvitto→Skatt (199 SEK/mån × 50) = 10k/mån
+**= 60k SEK/mån from 4 products, all automated**
 
 ---
 
-## Success Criteria
+## Success Criteria PER PRODUCT
 
-A product is "worth 10k SEK" if:
+A product is worth building if:
 
 ✅ **MVP buildable in 3-7 days**  
-✅ **Launch cost <5k SEK** (Vercel free tier + domain + tools)  
-✅ **ROI >50% within 90 days** (15k SEK return minimum)  
-✅ **Passive operation** (<30 min/day maintenance)  
-✅ **Validated demand** (proven market, not speculation)  
-✅ **Shippable on Vercel** (NextJS + AI backend compatible)
+✅ **Launch cost <5k SEK** (Vercel free tier + domain)  
+✅ **Target revenue: 2-5k SEK/mån** (not 50k - keep it small)  
+✅ **Agent-drivable** (billing, support, monitoring automated)  
+✅ **TAM >200 customers** (Sweden-fokus OK)  
+✅ **Shippable on Vercel** (NextJS + AI + Supabase free tier)
 
 ---
 
