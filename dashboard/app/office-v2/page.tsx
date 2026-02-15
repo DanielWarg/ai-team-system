@@ -85,7 +85,10 @@ export default function OfficeV2() {
     )
   }
 
-  const agents = Object.entries(state.agents)
+  // Filter to only show scout, analyst, skeptiker
+  const agents = Object.entries(state.agents).filter(([name]) => 
+    name === 'scout' || name === 'analyst' || name === 'skeptiker'
+  )
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-8">

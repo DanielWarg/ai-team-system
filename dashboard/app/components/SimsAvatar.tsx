@@ -36,7 +36,8 @@ const MOOD_FACE = {
 }
 
 export default function SimsAvatar({ agent, mood = 'focused', activity, size = 100 }: SimsAvatarProps) {
-  const colors = AGENT_COLORS[agent]
+  // Fallback to scout if agent not found
+  const colors = AGENT_COLORS[agent] || AGENT_COLORS.scout
   const face = MOOD_FACE[mood as keyof typeof MOOD_FACE] || MOOD_FACE.focused
   
   return (
