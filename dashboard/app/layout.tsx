@@ -23,10 +23,13 @@ export default function RootLayout({
             </Link>
             <div className="flex gap-4 text-sm">
               <Link href="/" className="text-gray-400 hover:text-cyan transition-colors">
-                Build Progress
+                📊 Build Progress
+              </Link>
+              <Link href="/alice" className="text-gray-400 hover:text-orange-400 transition-colors">
+                🐇 Alice Control
               </Link>
               <Link href="/office-v2" className="text-gray-400 hover:text-cyan transition-colors">
-                The Office (SIMS) 🏢
+                🎮 SIMS Office
               </Link>
             </div>
           </div>
